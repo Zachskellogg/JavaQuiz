@@ -3,7 +3,11 @@
     font-family: Gotham Rounded;
   }
   
-  
+  :root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+  }
   
   body {
     --hue: var(--hue-neutral);
@@ -17,7 +21,14 @@
     background-color: hsl(var(--hue), 100%, 20%);
   }
   
- 
+  body.correct {
+    --hue: var(--hue-correct);
+  }
+  
+  body.wrong {
+    --hue: var(--hue-wrong);
+  }
+  
   .container {
     width: 800px;
     max-width: 80%;
@@ -58,6 +69,12 @@
     --hue: var(--hue-wrong);
   }
   
+  .scoreCard {
+    margin: 10px 5px 5px 5px;
+    color: red;
+    background-color: seashell;
+  }
+
   .start-btn, .next-btn {
     font-size: 1.5rem;
     font-weight: bold;
